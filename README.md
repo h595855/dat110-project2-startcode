@@ -230,7 +230,7 @@ in order to be able to also process the remaining types of messages.
 
 The tests found in the `no.hvl.dat110.broker.processing.tests` package can be used to test the implemented methods.
 
-**IMPORTANT NOTE:** The tests in the package will have to be run one at a time as they are using the same TCP/IP port for the broker.
+**IMPORTANT NOTE:** The tests in the `no.hvl.dat110.broker.processing.tests` package, i.e., Test1, Test2, ... ,Test7 will have to be run one at a time as they are using the same TCP/IP port for the broker.
 
 ### Task C: IoT sensor-display application
 
