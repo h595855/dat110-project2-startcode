@@ -344,7 +344,7 @@ If using Java 11 SDK (or later), then you will have to download JavaFX for your 
 
 Follow the instruction here to setup JavaFX in Eclipse.
 
-https://github.com/selabhvl/dat110public-2020/blob/master/javafx/INSTALL.md
+https://github.com/selabhvl/dat110public-2021/blob/master/javafx/INSTALL.md
 
 For other IDEs see
 
@@ -354,7 +354,7 @@ For other IDEs see
 
 3. In order to compile the chatapp client you *may* in addition have to add the Eclipse project containing your implementation of the PB-MOM middleware to the Build Path of the project for the chat application GUI client.
 
-#### Task D.2 Running the chat application
+#### Task D.2 Running the Chat application
 
 Start by testing the system by running the broker and two clients on the same machine. The broker will run on the TCP/IP port specified in the class BrokerServer.java and you start the broker server by running the main-method in this class. Try creating topics and then publish some messages.
 
