@@ -44,7 +44,7 @@ In addition, there are two optional - and more challenging task for those intere
 
 **Task E is most likely easier than Task F**
 
-### Getting Started
+### Getting started - obtaining the start-code and the unit-test projects
 
 #### Fork and Clone the start-code repository
 
