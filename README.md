@@ -2,7 +2,7 @@
 
 ### Organisation
 
-The project work is to be undertaken in **groups of 2-4 students** - preferably the same groups as for project 1.
+This project work is to be undertaken in **groups of 2-4 students** - preferably the same groups as for project 1.
 
 Discussions among the groups are allowed, but the code handed in by the group should be the work of the group members - and not members of other groups.
 
@@ -344,7 +344,7 @@ If using Java 11 SDK (or later), then you will have to download JavaFX for your 
 
 Follow the instruction here to setup JavaFX in Eclipse.
 
-https://github.com/selabhvl/dat110public-2021/blob/master/javafx/INSTALL.md
+https://github.com/selabhvl/dat110public/blob/master/javafx/INSTALL.md
 
 For other IDEs see
 
@@ -398,4 +398,4 @@ The figure below summarises the implementation with the red boxes indicating cla
 
 Each group must hand in a link on Canvas to a git-repository containing their implementation and screen-shots showing the result of running all the unit-tests.
 
-Please remember to hand-in as a member of a group in Canvas: https://hvl365-my.sharepoint.com/:w:/g/personal/akv_hvl_no/EdkQXNKVjmhPrHNtD3n5r74B6KSb7DwmVYf9MA3SIUA4Sw?e=hC5Q9i
+**Remember** to hand in as a group (see Canvas)
