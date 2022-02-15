@@ -53,6 +53,7 @@ public class Storage {
 	public void addClientSession(String user, Connection connection) {
 
 		// TODO: add corresponding client session to the storage
+		// See ClientSession class
 		
 		throw new UnsupportedOperationException(TODO.method());
 		
@@ -60,8 +61,9 @@ public class Storage {
 
 	public void removeClientSession(String user) {
 
-		// TODO: remove client session for user from the storage
-
+		// TODO: disconnet the client (user) 
+		// and remove client session for user from the storage
+		
 		throw new UnsupportedOperationException(TODO.method());
 		
 	}

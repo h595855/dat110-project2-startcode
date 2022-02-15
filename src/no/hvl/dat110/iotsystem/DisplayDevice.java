@@ -17,7 +17,7 @@ public class DisplayDevice {
 				
 		// create a client object and use it to
 		
-		// - connect to the broker
+		// - connect to the broker - use "display" as the username
 		// - create the temperature topic on the broker
 		// - subscribe to the topic
 		// - receive messages on the topic

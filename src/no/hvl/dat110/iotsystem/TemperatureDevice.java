@@ -16,7 +16,7 @@ public class TemperatureDevice {
 
 		// create a client object and use it to
 
-		// - connect to the broker
+		// - connect to the broker - user "sensor" as the user name
 		// - publish the temperature(s)
 		// - disconnect from the broker
 

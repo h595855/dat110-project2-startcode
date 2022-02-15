@@ -108,7 +108,7 @@ The figure below gives an overview of the implementation of the broker server. T
 
 ![](assets/markdown-img-paste-20200218140610451.jpg)
 
-The implementation of the broker can be found in the `no.hvl.dat110.broker` package. You will have to study the code of the broker which is comprised of the following subclasses
+The implementation of the broker can be found in the `no.hvl.dat110.broker` package. You will have to study the code of the broker which is comprised of the following classes
 
 - `ClientSesssion.java` which used to represent a *session* with a currently connected client on the broker side. Whenever a client (user) connects, a corresponding `ClientSession`-object will be created on the broker-side representing the underlying message transport connection. The methods in this class must be used when the broker is to receive and send messages to a connected client.
 
@@ -155,7 +155,7 @@ public abstract class Stopable extends Thread {
 	}
 }
 ```
-The classes `StopableExample.java` and `StopableExampleMain.java` contains an example of use of Stopable-thread abstraction.
+The classes `StopableExample.java` and `StopableExampleMain.java` in the `no.hvl.dat110.common` package contains an example of use of Stopable-thread abstraction.
 
 #### Task B.1 Broker Storage
 
@@ -238,13 +238,15 @@ In this task you will use the PB-MOM middleware to implement a small IoT system 
 
 The start of the implementation of the IoT-system can be found in the `no.hvl.dat110.iotsystem` package.
 
-The class `Client.java` contains an implementation of the methods needed for implementing the sensor and display clients that can connect to the broker.
+The class `Client.java` in the `no.hvl.dat110.client` package contains an implementation of the methods needed for implementing the sensor and display clients that can connect to the broker.
 
 The class `Common.java` contains the port number that can be used for connecting clients to the broker server.
 
 The principle of the sensor-display application is shown below
 
 ![](assets/markdown-img-paste-2020021814081969.jpg)
+
+**IMPORTANT NOTE:** the sensor and the display will be clients (and users) and you can for instance use `"display"` and `"sensor"` as the user names.
 
 #### Sensor device implementation
 
