@@ -108,55 +108,75 @@ public class Dispatcher extends Stopable {
 
 	public void onCreateTopic(CreateTopicMsg msg) {
 
+		String topic = msg.getTopic();
+		
 		Logger.log("onCreateTopic:" + msg.toString());
 
 		// TODO: create the topic in the broker storage
+		storage.createTopic(topic);
 		// the topic is contained in the create topic message
 
-		throw new UnsupportedOperationException(TODO.method());
+	
 
 	}
 
 	public void onDeleteTopic(DeleteTopicMsg msg) {
 
+		String topic = msg.getTopic();
+		
 		Logger.log("onDeleteTopic:" + msg.toString());
 
 		// TODO: delete the topic from the broker storage
+		storage.deleteTopic(topic);
 		// the topic is contained in the delete topic message
 		
-		throw new UnsupportedOperationException(TODO.method());
 	}
 
 	public void onSubscribe(SubscribeMsg msg) {
-
+		
+		String user = msg.getUser();
+		String topic = msg.getTopic();
+		
 		Logger.log("onSubscribe:" + msg.toString());
 
 		// TODO: subscribe user to the topic
+		storage.addSubscriber(user, topic);
 		// user and topic is contained in the subscribe message
-		
-		throw new UnsupportedOperationException(TODO.method());
+	
 
 	}
 
 	public void onUnsubscribe(UnsubscribeMsg msg) {
+		
+		String user = msg.getUser();
+		String topic = msg.getTopic();
 
 		Logger.log("onUnsubscribe:" + msg.toString());
 
 		// TODO: unsubscribe user to the topic
+		storage.removeSubscriber(user, topic);
 		// user and topic is contained in the unsubscribe message
 		
-		throw new UnsupportedOperationException(TODO.method());
 	}
 
 	public void onPublish(PublishMsg msg) {
 
+		String topic = msg.getTopic();
+		
 		Logger.log("onPublish:" + msg.toString());
 
 		// TODO: publish the message to clients subscribed to the topic
 		// topic and message is contained in the subscribe message
 		// messages must be sent using the corresponding client session objects
 		
-		throw new UnsupportedOperationException(TODO.method());
+		Set<String> subscribers = storage.getSubscribers(topic);
+		
+		for(String user : subscribers) {
+			if(storage.getSession(user) != null) {
+				storage.getSession(user).send(msg);
+			}
+		}
+		
 
 	}
 }
