@@ -113,9 +113,16 @@ public class Dispatcher extends Stopable {
 		Logger.log("onCreateTopic:" + msg.toString());
 
 		// TODO: create the topic in the broker storage
+		storage.createTopic(topic);
 		// the topic is contained in the create topic message
+<<<<<<< HEAD
 		storage.createTopic(topic);
 		
+=======
+
+	
+
+>>>>>>> master
 	}
 
 	public void onDeleteTopic(DeleteTopicMsg msg) {
@@ -125,24 +132,37 @@ public class Dispatcher extends Stopable {
 		Logger.log("onDeleteTopic:" + msg.toString());
 
 		// TODO: delete the topic from the broker storage
+		storage.deleteTopic(topic);
 		// the topic is contained in the delete topic message
 		
+<<<<<<< HEAD
 		storage.deleteTopic(topic);
 		
 	}
 
 	public void onSubscribe(SubscribeMsg msg) {
 
+=======
+	}
+
+	public void onSubscribe(SubscribeMsg msg) {
+		
+>>>>>>> master
 		String user = msg.getUser();
 		String topic = msg.getTopic();
 		
 		Logger.log("onSubscribe:" + msg.toString());
 
 		// TODO: subscribe user to the topic
+		storage.addSubscriber(user, topic);
 		// user and topic is contained in the subscribe message
+<<<<<<< HEAD
 		
 		storage.addSubscriber(user, topic);
 		
+=======
+	
+>>>>>>> master
 
 	}
 
@@ -150,21 +170,32 @@ public class Dispatcher extends Stopable {
 		
 		String user = msg.getUser();
 		String topic = msg.getTopic();
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> master
 		Logger.log("onUnsubscribe:" + msg.toString());
 
 		// TODO: unsubscribe user to the topic
+		storage.removeSubscriber(user, topic);
 		// user and topic is contained in the unsubscribe message
 		
+<<<<<<< HEAD
 		storage.removeSubscriber(user, topic);
 		
+=======
+>>>>>>> master
 	}
 
 	public void onPublish(PublishMsg msg) {
 
 		String topic = msg.getTopic();
 		
+<<<<<<< HEAD
 		
+=======
+>>>>>>> master
 		Logger.log("onPublish:" + msg.toString());
 
 		// TODO: publish the message to clients subscribed to the topic
@@ -172,18 +203,28 @@ public class Dispatcher extends Stopable {
 		// messages must be sent using the corresponding client session objects
 		
 		Set<String> subscribers = storage.getSubscribers(topic);
+<<<<<<< HEAD
 	
 		//hvis session objekt for brukeren ikke er null... 
 		//sender message til bruker
+=======
+>>>>>>> master
 		
 		for(String user : subscribers) {
 			if(storage.getSession(user) != null) {
 				storage.getSession(user).send(msg);
 			}
+<<<<<<< HEAD
 			
 			
 		}
 			
 			
 		}
+=======
+		}
+		
+
+	}
+>>>>>>> master
 }
