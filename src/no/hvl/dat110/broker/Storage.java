@@ -54,59 +54,86 @@ public class Storage {
 	public void addClientSession(String user, Connection connection) {
 
 		// TODO: add corresponding client session to the storage
-		// See ClientSession class
+		ClientSession session = new ClientSession(user, connection);
 		
+<<<<<<< HEAD
 		ClientSession session = new ClientSession(user, connection);
 	
 		clients.put(user, session);
 		
+=======
+		clients.put(user, session);
+		// See ClientSession class
+>>>>>>> master
 		
 	}
 
 	public void removeClientSession(String user) {
 
 		// TODO: disconnet the client (user) 
+		clients.remove(user);
 		// and remove client session for user from the storage
 		
+<<<<<<< HEAD
 		clients.remove(user);
 		
 		
+=======
+>>>>>>> master
 	}
 
 	public void createTopic(String topic) {
 
 		// TODO: create topic in the storage
+<<<<<<< HEAD
 		
 		subscriptions.put(topic, new HashSet<>());
 		
+=======
+		subscriptions.put(topic, new HashSet<>());
+	
+>>>>>>> master
 	
 	}
 
 	public void deleteTopic(String topic) {
 
 		// TODO: delete topic from the storage
+<<<<<<< HEAD
 
 		subscriptions.remove(topic);
 		
+=======
+		subscriptions.remove(topic);
+	
+>>>>>>> master
 		
 	}
 
 	public void addSubscriber(String user, String topic) {
 
 		// TODO: add the user as subscriber to the topic
+		subscriptions.get(topic).add(user);
 		
+<<<<<<< HEAD
 	subscriptions.get(topic).add(user);
 	
 
+=======
+>>>>>>> master
 		
 	}
 
 	public void removeSubscriber(String user, String topic) {
 
 		// TODO: remove the user as subscriber to the topic
+<<<<<<< HEAD
 
 		subscriptions.get(topic).remove(user);
 
+=======
+		subscriptions.get(topic).remove(user);
+>>>>>>> master
 		
 	}
 }

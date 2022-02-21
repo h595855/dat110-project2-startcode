@@ -8,11 +8,20 @@ public class CreateTopicMsg extends Message {
 	// Implement object variables - a topic is required
 	private String topic;
 	
+<<<<<<< HEAD
 	public CreateTopicMsg(String user, String topic) {
 		super(MessageType.CREATETOPIC, user);
 		this.topic = topic;	
 	}
 
+=======
+	
+	public CreateTopicMsg(String user, String topic) {
+		super(MessageType.CREATETOPIC, user);
+		this.topic = topic;
+	}
+	
+>>>>>>> master
 	public String getTopic() {
 		return topic;
 	}
@@ -27,10 +36,13 @@ public class CreateTopicMsg extends Message {
 	}
 	
 	
+<<<<<<< HEAD
 	
 	
 	
 	
+=======
+>>>>>>> master
 	
 	// Constructor, get/set-methods, and toString method
     // as described in the project text	
