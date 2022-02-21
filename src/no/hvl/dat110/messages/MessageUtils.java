@@ -13,6 +13,7 @@ public class MessageUtils {
 
 		JsonParser jsonParser = new JsonParser();
 		JsonObject json = jsonParser.parse(msg).getAsJsonObject();
+	
 		
 		String typestr = json.get("type").getAsString();
 
